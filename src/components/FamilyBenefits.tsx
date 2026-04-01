@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Play, Music, Gamepad2, Tv, Film, Radio, Phone, Heart, Gift, Disc, Shield, Cloud, Zap, Users, CheckCircle, Star } from 'lucide-react';
+import { Play, Music, Gamepad2, Tv, Film, Radio, Phone, Heart, Gift, Disc, Shield, Cloud, Zap, Users, CheckCircle, Star, Globe } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { FloatingParticles } from './FloatingParticles';
 
@@ -125,10 +125,9 @@ export function FamilyBenefits() {
   ];
 
   return (
-    <section className="relative py-20 min-h-[80vh] bg-gray-900 overflow-visible">
-      
+    <section className="relative bg-[#151e47] overflow-visible">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
@@ -136,26 +135,30 @@ export function FamilyBenefits() {
             backgroundSize: '50px 50px'
           }}></div>
         </div>
-        
-        {/* Hexagonal Pattern with Content */}
-        <div className="absolute inset-0 opacity-90">
-          <div className="absolute inset-0 bg-[#151e47] flex flex-col justify-center">
-            <div className="text-center px-4 py-12 max-w-6xl mx-auto w-full">
-
-              
-              <h2 className="text-4xl lg:text-5xl text-white mb-6">
-                Conectividade sob medida
-                <span className="block text-[#2ba9a0]">
-                  para sua empresa
-                </span>
-              </h2>
+      </div>
+        {/* Content Wrapper */}
+        <div className="relative z-20 flex flex-col items-center py-24">
+          <div className="text-center px-4 max-w-6xl mx-auto w-full">
+            
+            {/* Badge */}
+            <div className="inline-flex items-center px-6 py-3 bg-[#1C1F3C] hover:bg-[#1C1F3C]/90 rounded-full shadow-lg shadow-black/20 mb-10 border border-white/5 group transition-all duration-300">
+              <Globe className="w-5 h-5 text-[#2ba9a0] mr-3 group-hover:animate-pulse" />
+              <span className="text-white font-semibold">Conectividade empresarial do futuro</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-bold leading-tight">
+              Conectividade sob medida
+              <span className="block text-[#2ba9a0]">
+                para sua empresa
+              </span>
+            </h2>
               
               <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
                 Nossa equipe comercial está pronta para desenvolver a solução ideal para suas necessidades empresariais
               </p>
 
               {/* Business Features Grid */}
-              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
                 {businessFeatures.filter((_, index) => index !== 3).map((feature, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-[32px] p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div className="text-[#2ba9a0] mb-4 flex justify-center">
@@ -170,24 +173,25 @@ export function FamilyBenefits() {
 
             </div>
           </div>
+        
+        {/* Floating Network Nodes (maintained as background elements) */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-1/4 w-4 h-4 bg-[#02B3AA] rounded-full opacity-60 animate-network-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-80 animate-float"></div>
+          <div className="absolute bottom-1/3 left-1/6 w-5 h-5 bg-[#02B3AA]/70 rounded-full opacity-50 animate-network-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 right-1/6 w-2 h-2 bg-blue-300 rounded-full opacity-70 animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-3/4 left-1/3 w-3 h-3 bg-[#02B3AA]/90 rounded-full opacity-40 animate-network-pulse" style={{animationDelay: '3s'}}></div>
+          
+          {/* Gradient Orbs */}
+          <div className="absolute top-1/4 right-1/3 w-32 h-32 bg-gradient-to-r from-[#02B3AA]/20 to-blue-500/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-500/30 to-[#02B3AA]/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
+          
+          {/* Connection Lines */}
+          <div className="absolute top-1/4 left-1/4 w-32 h-px bg-gradient-to-r from-[#02B3AA]/30 to-transparent"></div>
+          <div className="absolute top-1/3 right-1/4 w-24 h-px bg-gradient-to-l from-blue-400/30 to-transparent"></div>
+          <div className="absolute bottom-1/3 left-1/6 h-20 w-px bg-gradient-to-b from-[#02B3AA]/20 to-transparent"></div>
         </div>
-        
-        {/* Floating Network Nodes */}
-        <div className="absolute top-20 left-1/4 w-4 h-4 bg-[#02B3AA] rounded-full opacity-60 animate-network-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-80 animate-float"></div>
-        <div className="absolute bottom-1/3 left-1/6 w-5 h-5 bg-[#02B3AA]/70 rounded-full opacity-50 animate-network-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 right-1/6 w-2 h-2 bg-blue-300 rounded-full opacity-70 animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-3/4 left-1/3 w-3 h-3 bg-[#02B3AA]/90 rounded-full opacity-40 animate-network-pulse" style={{animationDelay: '3s'}}></div>
-        
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 right-1/3 w-32 h-32 bg-gradient-to-r from-[#02B3AA]/20 to-blue-500/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-500/30 to-[#02B3AA]/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Connection Lines */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-px bg-gradient-to-r from-[#02B3AA]/30 to-transparent"></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-px bg-gradient-to-l from-blue-400/30 to-transparent"></div>
-        <div className="absolute bottom-1/3 left-1/6 h-20 w-px bg-gradient-to-b from-[#02B3AA]/20 to-transparent"></div>
-      </div>
+
 
       {/* Floating Particles */}
       <FloatingParticles />

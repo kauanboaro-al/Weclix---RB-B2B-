@@ -106,13 +106,6 @@ export function WhyWeclix() {
             ))}
           </div>
 
-          {/* Bottom Section */}
-          <div className="text-center mt-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#1C1F3C] hover:bg-[#1C1F3C]/90 rounded-full shadow-lg shadow-[#1C1F3C]/25 group hover:shadow-[#1C1F3C]/40 transition-all duration-300">
-              <Globe className="w-5 h-5 text-white mr-3 group-hover:animate-pulse" />
-              <span className="text-white font-semibold">Conectividade empresarial do futuro</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
