@@ -285,7 +285,7 @@ export function HeroSection({ onNavigateToPlans }: HeroSectionProps) {
             </div>
 
             {/* Status Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full md:-ml-36 lg:-ml-40 shadow-lg shadow-black/10 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:via-transparent before:to-white/10 before:rounded-full hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-black/20 mt-6 md:mt-auto mb-16 px-4 md:px-0">
+            <div className="inline-flex items-center px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full md:-ml-36 lg:-ml-40 shadow-lg shadow-black/10 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:via-transparent before:to-white/10 before:rounded-full hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-black/20 mt-6 md:mt-auto mb-16">
               <div className="w-2 h-2 bg-[#02B3AA] rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm text-white/90 font-medium relative z-10">Conectividade empresarial</span>
             </div>

@@ -49,7 +49,7 @@ export function WhyWeclix() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-200 rounded-full mb-6">
+            <div className="inline-flex items-center px-6 py-2 bg-gray-100 border border-gray-200 rounded-full mb-6">
               <div className="w-2 h-2 bg-[#02B3AA] rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm text-gray-700 font-medium">Por que somos diferentes</span>
             </div>
