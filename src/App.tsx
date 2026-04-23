@@ -1,3 +1,4 @@
+// v1.0.1 - Sync trigger
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';

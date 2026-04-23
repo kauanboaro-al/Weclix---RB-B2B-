@@ -155,10 +155,10 @@ export function HeroSection({ onNavigateToPlans }: HeroSectionProps) {
 
       console.log('🎯 Iniciando captura de lead...');
 
-      // Send to Make.com webhook first
+      // Send to ByStartup webhook first
       try {
-        console.log('📤 Enviando para Make.com webhook...');
-        const webhookResponse = await fetch('https://hook.us2.make.com/wrrp05u4v9k6ovkz6bnyvorzb9831o8w', {
+        console.log('📤 Enviando para ByStartup webhook...');
+        const webhookResponse = await fetch('https://webhook.bystartup.com/webhook/d487f3e9-b7d0-4a78-8674-bfa9226b769e', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -167,12 +167,12 @@ export function HeroSection({ onNavigateToPlans }: HeroSectionProps) {
         });
 
         if (webhookResponse.ok) {
-          console.log('✅ Lead enviado com sucesso para Make.com!');
+          console.log('✅ Lead enviado com sucesso para ByStartup!');
         } else {
-          console.log('⚠️ Problema ao enviar para Make.com webhook');
+          console.log('⚠️ Problema ao enviar para ByStartup webhook');
         }
       } catch (error) {
-        console.log('❌ Erro ao enviar para Make.com webhook:', error);
+        console.log('❌ Erro ao enviar para ByStartup webhook:', error);
       }
 
       // Continue with existing Google Sheets backup
